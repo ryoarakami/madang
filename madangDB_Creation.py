@@ -9,7 +9,7 @@ db_conn = duckdb.connect(database='madang.db')
 db_conn.sql("CREATE TABLE IF NOT EXISTS Customer AS SELECT * FROM 'Customer_madang.csv'")
 db_conn.sql("CREATE TABLE IF NOT EXISTS Book AS SELECT * FROM 'Book_madang.csv'")
 db_conn.sql("CREATE TABLE IF NOT EXISTS Orders AS SELECT * FROM 'Orders_madang.csv'")
-conn = get_db_connection()
+
 
 def query(sql):
     sql_upper = sql.strip().upper()
@@ -182,3 +182,4 @@ with tab5:
             st.success(f"도서 번호 {bookid_to_delete} 삭제 완료.")
         else:
             st.error("삭제할 도서 번호를 입력하세요.")
+
