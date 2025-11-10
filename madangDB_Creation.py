@@ -31,7 +31,7 @@ if 'current_orders' not in st.session_state:
     st.session_state.current_orders = pd.DataFrame()
 
 
-st.title("📚 마당 서점 (DuckDB Backend)")
+st.title("📚 마당 서점")
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "고객 조회", "거래 입력", "신규 가입", "전체 거래 조회", "책 재고 및 등록"
@@ -182,5 +182,6 @@ with tab5:
             st.success(f"도서 번호 {bookid_to_delete} 삭제 완료.")
         else:
             st.error("삭제할 도서 번호를 입력하세요.")
+
 
 
